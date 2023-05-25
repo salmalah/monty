@@ -42,6 +42,7 @@ void pall_lines(stack_t **stack, unsigned int line_number);
 void pint_line(stack_t **stack, unsigned int n);
 void unknown_opcode(unsigned int n);
 void sub_l(stack_t **stack, unsigned int num);
+int is_valid_integer(const char *str);
 void nop_f(stack_t **head, unsigned int n);
 void error_pop(stack_t **head, unsigned int counter);
 void pop_element(stack_t **stack, unsigned int n);
