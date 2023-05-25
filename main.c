@@ -1,5 +1,4 @@
 #include "monty.h"
-stack_t *stack = NULL;
 /**
  * main - function
  * @argc: number of arguments
@@ -9,6 +8,7 @@ stack_t *stack = NULL;
 int main(int argc, char *argv[])
 {
 	FILE *file;
+	stack_t *stack = NULL;
 	unsigned int line_number = 0;
 	char *opcode, *buffer = NULL;
 	size_t buffer_size = 0;
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		opcode = strtok(buffer, " \t\n");
 		if (opcode != NULL)
 		{
-			execute_cmd(opcode, line_number);
+			execute_cmd(opcode, line_number, &stack);
 		}
 	}
 	free(buffer);

@@ -24,8 +24,9 @@ void pall_lines(stack_t **stack, unsigned int line_number)
  * @line_number: line content the cmd
  * Return: nothing
  */
-void execute_cmd(char *opcode, unsigned int line_number)
+void execute_cmd(char *opcode, unsigned int line_number,stack_t **stack_ptr)
 {
+
 	instruction_t str[] = {
 		{"push", push_line}, {"pall", pall_lines}, {"pint", pint_line},
 		 {"pop", pop_element}, {"swap", swap_element}, {"add", add_elements},
@@ -37,7 +38,7 @@ void execute_cmd(char *opcode, unsigned int line_number)
 	{
 		if (strcmp(opcode, str[i].opcode) == 0)
 		{
-			str[i].f(&stack, line_number);
+			str[i].f(stack_ptr, line_number);
 			return;
 		}
 	}
