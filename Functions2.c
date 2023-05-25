@@ -67,6 +67,6 @@ void add_elements(stack_t **stack, unsigned int num)
  */
 void nop_f(stack_t **head, unsigned int n)
 {
-	(void) head;
-	(void) n;
+	(void)head;
+	(void)n;
 }
