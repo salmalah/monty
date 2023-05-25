@@ -28,7 +28,8 @@ void execute_cmd(const char *opcode, unsigned int line_number)
 {
 	instruction_t str[] = {
 		{"push", push_line}, {"pall", pall_lines}, {"pint", pint_line},
-		 {"pop", pop_element}, {"swap", swap_element}, {"add", add_elements}
+		 {"pop", pop_element}, {"swap", swap_element}, {"add", add_elements},
+		  {"nop", nop_f}
 	};
 	size_t length = sizeof(str) / sizeof(str[0]), i = 0;
 

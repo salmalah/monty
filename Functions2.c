@@ -59,13 +59,13 @@ void add_elements(stack_t **stack, unsigned int num)
 	pop_element(stack, num);
 }
 /**
- * nop - A function does nothing
+ * nop_f - A function does nothing
  * @head: head of stack
  * @n: Line number
  *
  * Return: Nothing
  */
-void nop(stack_t **head, unsigned int n)
+void nop_f(stack_t **head, unsigned int n)
 {
 	(void) head;
 	(void) n;
