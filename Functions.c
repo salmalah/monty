@@ -40,9 +40,8 @@ void execute_cmd(const char *opcode, unsigned int line_number)
 			str[i].f(&stack, line_number);
 			return;
 		}
-		else
-			unknown_opcode(line_number);
 	}
+	unknown_opcode(line_number);
 
 }
 /**
