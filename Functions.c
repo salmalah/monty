@@ -61,7 +61,7 @@ void push_line(stack_t **stack, unsigned int line_number)
 	stack_t *new_node;
 	char *argument = strtok(NULL, " \n");
 
-	if (argument == NULL || !is_valid_integer(argument))
+	if (argument == NULL || !is_integer(argument))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
