@@ -37,7 +37,7 @@ void execute_cmd(const char *opcode, unsigned int line_number)
 		if (strcmp(opcode, str[i].opcode) == 0)
 		{
 			str[i].f(&stack, line_number);
-			return
+			return;
 		}
 	}
 	unknown_opcode(line_number);
