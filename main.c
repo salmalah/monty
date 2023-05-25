@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char *opcode, *buffer = NULL;
 	size_t buffer_size = 0;
 
-	if (argc != 2)
+	if (argc == 1 || argc > 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		return (EXIT_FAILURE);
