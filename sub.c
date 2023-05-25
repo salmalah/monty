@@ -21,5 +21,6 @@ void sub_l(stack_t **stack, unsigned int num)
 	sub = s->next->n - s->n;
 	pop_element(stack, num);
 	s->n = sub;
+	free(s);
 }
 
