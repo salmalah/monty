@@ -7,7 +7,7 @@
  */
 void pop_element(stack_t **stack, unsigned int n)
 {
-	stack_t *s = NULL;
+	stack_t *s;
 
 	if (*stack == NULL)
 	{
@@ -16,8 +16,6 @@ void pop_element(stack_t **stack, unsigned int n)
 	s = *stack;
 	*stack = s->next;
 	free(s);
-	if (*stack)
-		(*stack)->prev = NULL;
 }
 /**
  * swap_elemen - A function that swaps the top two elements on the stack
