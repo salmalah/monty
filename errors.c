@@ -4,9 +4,9 @@
  * @n: line of error
  * Return: nothing
  */
-void unknown_opcode(unsigned int n)
+void unknown_opcode(unsigned int n, char *opcode)
 {
-	fprintf(stderr, "L%d: unknown instruction\n", n);
+	fprintf(stderr, "L%d: unknown instruction %s\n", n, opcode);
 	exit(EXIT_FAILURE);
 }
 /**
