@@ -9,7 +9,6 @@
 void sub_l(stack_t **stack, unsigned int num)
 {
 	stack_t *s;
-	int sub;
 
 	s = *stack;
 	if (*stack == NULL || (*stack)->next == NULL)
@@ -18,9 +17,7 @@ void sub_l(stack_t **stack, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 
-	sub = s->next->n - s->n;
+	s->next->n -= s->n;
 	pop_element(stack, num);
-	s->n = sub;
-	free(s);
 }
 
