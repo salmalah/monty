@@ -19,7 +19,7 @@ void error_pop(stack_t **head, unsigned int counter)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack\n", counter);
+		fprintf(stderr, "L%u: can't pop an empty stack\n", counter);
 		exit(EXIT_FAILURE);
 	}
 }
