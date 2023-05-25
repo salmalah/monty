@@ -25,22 +25,20 @@ void pop_element(stack_t **stack, unsigned int n)
  */
 void swap_element(stack_t **stack, unsigned int n)
 {
-	stack_t *s, *next;
+	stack_t *s = NULL;
+	int n = 0;
 
 	s = *stack;
+	n = s->n;
 	next = s->next;
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", n);
 		exit(EXIT_FAILURE);
 	}
-	s->next = next->next;
-	if (s->next != NULL)
-		s->next->prev = s;
-	next->prev = NULL;
-	next->next = s;
-	s->prev = next;
-	*stack = next;
+	s->n = n;
+	s->n = s->next->n;
+	s->next-n = n;
 }
 /**
  * add_elements - A function adds the top two elements of the stack
