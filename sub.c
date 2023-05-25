@@ -8,7 +8,7 @@
  */
 void sub_l(stack_t **stack, unsigned int num)
 {
-	stack_t = *s;
+	stack_t *s;
 	int sub;
 
 	s = *stack;
