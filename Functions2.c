@@ -33,6 +33,7 @@ void swap_element(stack_t **stack, unsigned int n)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", n);
 		exit(EXIT_FAILURE);
+		free(stack);
 	}
 	s->next = next->next;
 	if (s->next != NULL)
