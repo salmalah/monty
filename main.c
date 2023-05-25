@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
 		if (opcode == NULL)
 			continue;
 		execute_cmd(opcode, line_number, &stack);
-	
 	}
 	fclose(file);
 	free(buffer);
