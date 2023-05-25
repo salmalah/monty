@@ -32,6 +32,7 @@ void execute_cmd(const char *opcode, unsigned int line_number)
 		  {"nop", nop_f}
 	};
 	size_t length = sizeof(str) / sizeof(str[0]), i = 0;
+
 	for (; i < length; ++i)
 	{
 		if (strcmp(opcode, str[i].opcode) == 0)
