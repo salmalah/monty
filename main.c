@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	{
 		line_number++;
 		opcode = strtok(buffer, " \t\n");
-		if (opcode != NULL &&  strcmp(opcode, "#") != 0)
+		if (opcode != NULL)
 		{
 			execute_cmd(opcode, line_number);
 		}

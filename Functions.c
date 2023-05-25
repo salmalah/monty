@@ -41,7 +41,7 @@ void execute_cmd(char *opcode, unsigned int line_number)
 			return;
 		}
 	}
-	if (opcode && str[i].opcode == NULL)
+	if (str[i].opcode == NULL)
 		unknown_opcode(line_number);
 
 }
