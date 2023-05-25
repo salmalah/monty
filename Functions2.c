@@ -13,12 +13,9 @@ void pop_element(stack_t **stack, unsigned int n)
 	{
 		error_pop(stack, n);
 	}
-	s = (*stack)->next;
+	s = *stack;
+	*stack = s->next;
 	free(s);
-	*stack = s;
-	if (!*stack)
-		return;
-	(*stack)->prev = NULL;
 }
 /**
  * swap_elemen - A function that swaps the top two elements on the stack
