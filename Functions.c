@@ -22,9 +22,10 @@ void pall_lines(stack_t **stack, unsigned int line_number)
  * execute_cmd - A fucntion executes the opcode enter by user
  * @opcode: content of opcode
  * @line_number: line content the cmd
+ * @stack_ptr: a stack pointer
  * Return: nothing
  */
-void execute_cmd(char *opcode, unsigned int line_number,stack_t **stack_ptr)
+void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 {
 
 	instruction_t str[] = {
