@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	while (getline(&buffer, &buffer_size, file) != -1)
 	{
 		line_number++;
-		opcode = strtok(line, " \t\n");
+		opcode = strtok(buffer, " \t\n");
 		if (opcode != NULL)
 		{
 			execute_cmd(opcode, line_number);
