@@ -41,10 +41,7 @@ void execute_cmd(const char *opcode, unsigned int line_number)
 			return;
 		}
 	}
-	if (strcmp(opcode, str[i].opcode) != 0)
-	{
-		unknown_opcode(line_number);
-	}
+	unknown_opcode(line_number);
 
 }
 /**
