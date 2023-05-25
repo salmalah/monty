@@ -18,8 +18,8 @@ void sub_l(stack_t **stack, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 
-	s = s->next->n - s->n;
+	sub = s->next->n - s->n;
 	pop_element(stack, num);
-	s->n = s;
+	s->n = sub;
 }
 
