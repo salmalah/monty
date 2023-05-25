@@ -31,13 +31,11 @@ int main(int argc, char *argv[])
 		opcode = strtok(buffer, " \t\n");
 		if (opcode == NULL)
 			continue;
-		if (opcode != NULL)
-		{
-			execute_cmd(opcode, line_number, &stack);
-		}
+		execute_cmd(opcode, line_number, &stack);
+	
 	}
-	free(buffer);
 	fclose(file);
+	free(buffer);
 	return (EXIT_SUCCESS);
 }
 
