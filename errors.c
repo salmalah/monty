@@ -2,6 +2,7 @@
 /**
  * unknown_opcode - A function return error if unkonwnedopcode
  * @n: line of error
+ * @opcode: opcode text
  * Return: nothing
  */
 void unknown_opcode(unsigned int n, char *opcode)
