@@ -55,7 +55,7 @@ void push_line(stack_t **stack, unsigned int line_number)
 	stack_t *new_node;
 	char *argument = strtok(NULL, " \n");
 
-	if (argument == NULL || !isdigit(*argument))
+	if (argument == NULL || (atoi(argument) == 0 && argument[0] != '0'))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
