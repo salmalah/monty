@@ -24,12 +24,12 @@ void pall_lines(stack_t **stack, unsigned int line_number)
  * @line_number: line content the cmd
  * Return: nothing
  */
-void execute_cmd(const char *opcode, unsigned int line_number)
+void execute_cmd(char *opcode, unsigned int line_number)
 {
 	instruction_t str[] = {
 		{"push", push_line}, {"pall", pall_lines}, {"pint", pint_line},
 		 {"pop", pop_element}, {"swap", swap_element}, {"add", add_elements},
-		  {"nop", nop_f}, {"sub", sub_l}
+		  {"nop", nop_f}, {"sub", sub_l}, {NULL, NULL}
 	};
 	size_t length = sizeof(str) / sizeof(str[0]), i = 0;
 
@@ -41,7 +41,8 @@ void execute_cmd(const char *opcode, unsigned int line_number)
 			return;
 		}
 	}
-	unknown_opcode(line_number);
+	if (opcode && str[i].opcode == NULL)
+		unknown_opcode(line_number);
 
 }
 /**
@@ -55,7 +56,7 @@ void push_line(stack_t **stack, unsigned int line_number)
 	stack_t *new_node;
 	char *argument = strtok(NULL, " \n");
 
-	if (argument == NULL || (atoi(argument) == 0 && argument[0] != '0'))
+	if (argument == NULL || !isdigit(*argument))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
