@@ -18,7 +18,7 @@ void pop_element(stack_t **stack, unsigned int n)
 	free(s);
 }
 /**
- * swap_elemen - A function that swaps the top two elements on the stack
+ * swap_element - A function that swaps the top two elements on the stack
  * @stack: The stack head
  * @n: Line number
  * Return: Nothing
@@ -41,7 +41,7 @@ void swap_element(stack_t **stack, unsigned int n)
 }
 /**
  * add_elements - A function adds the top two elements of the stack
- * @tack: The stack head
+ * @stack: The stack head
  * @num: number of line
  * Return: Nothing
  */
