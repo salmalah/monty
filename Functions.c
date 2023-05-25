@@ -1,5 +1,5 @@
 #include "monty.h"
-stack_t *stack = NULL;
+
 /**
  * pall_lines - A function prints the stack lines
  * @stack: stack head
@@ -59,7 +59,6 @@ void push_line(stack_t **stack, unsigned int line_number)
 	if (argument == NULL || !isdigit(*argument))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-		free(*stack);
 		exit(EXIT_FAILURE);
 	}
 	new_node = malloc(sizeof(stack_t));
