@@ -23,8 +23,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
-	while (1)
-	{
+
 	while (getline(&buffer, &buffer_size, file) != -1)
 	{
 		line_number++;
@@ -33,7 +32,6 @@ int main(int argc, char *argv[])
 		{
 			execute_cmd(opcode, line_number);
 		}
-	}
 	}
 	free(buffer);
 	fclose(file);
