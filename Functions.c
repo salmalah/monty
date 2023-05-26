@@ -47,7 +47,9 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 	if (opcode_found)
 		str[i].f(stack_ptr, line_number);
 	else
+	{
 		unknown_opcode(line_number, opcode);
+	}
 
 }
 /**

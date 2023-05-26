@@ -48,5 +48,6 @@ void error_pop(stack_t **head, unsigned int counter);
 void pop_element(stack_t **stack, unsigned int n);
 void add_elements(stack_t **stack, unsigned int num);
 void swap_element(stack_t **stack, unsigned int n);
+void free_stack(stack_t **stack);
 void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr);
 #endif
