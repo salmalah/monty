@@ -48,8 +48,10 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 		str[i].f(stack_ptr, line_number);
 	else
 	{
-		unknown_opcode(line_number, opcode);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+		exit(EXIT_FAILURE);
 	}
+	
 
 }
 /**
