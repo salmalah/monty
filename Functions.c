@@ -43,13 +43,13 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 			opcode_found = 1;
 			break;
 		}
-	}
-	if (opcode_found)
-		str[i].f(stack_ptr, line_number);
-	else
+	
+	if (!opcode_found)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		exit(EXIT_FAILURE);
+	}
+	str[i].f(stack_ptr, line_number);
 	}
 }
 /**
