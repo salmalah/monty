@@ -51,8 +51,6 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		exit(EXIT_FAILURE);
 	}
-	
-
 }
 /**
  * push_line - A function push in stack
