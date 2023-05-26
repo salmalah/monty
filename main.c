@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
 	{
 		line_number++;
 		opcode = strtok(buffer, " \t\n");
-		if (opcode == NULL)
-			continue;
+		/*if (opcode == NULL)
+			continue;*/
 		execute_cmd(opcode, line_number, &stack);
 	}
 	fclose(file);

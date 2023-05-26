@@ -43,13 +43,12 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 			opcode_found = 1;
 			str[i].f(stack_ptr, line_number);
 			break;
+
 		}
 	}
 	if (!opcode_found)
-	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-		exit(EXIT_FAILURE);
-	}
+		unknown_opcode(line_number, opcode);
+
 }
 /**
  * push_line - A function push in stack
