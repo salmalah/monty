@@ -1,22 +1,22 @@
 #include "monty.h"
 /**
  * is_integer - Check if a string is a valid integer
- * @str: input string
+ * @s: input string
  * Return: 1 if valid integer, 0 otherwise
  */
-int is_integer(const char *str)
+int is_integer(const char *s)
 {
-	if (str == NULL || *str == '\0')
+	if (s == NULL || *s == '\0')
 		return (0);
-	if (*str == '-' || *str == '+')
-		str++;
-	if (*str == '\0')
+	if (*s == '-' || *s == '+')
+		s++;
+	if (*s == '\0')
 		return (0);
-	while (*str != '\0')
+	while (*s != '\0')
 	{
-		if (!isdigit(*str))
+		if (!isdigit(*s))
 			return (0);
-		str++;
+		s++;
 	}
 	return (1);
 }

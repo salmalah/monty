@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	{
 		line_number++;
 		opcode = strtok(buffer, " \t\n");
-		if (opcode == NULL)
+		if (opcode == NULL || *opcode == '#')
 			continue;
 		execute_cmd(opcode, line_number, &stack);
 	}
