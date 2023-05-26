@@ -34,20 +34,21 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 		  {"nop", nop_f}, {"sub", sub_l}, {NULL, NULL}
 	};
 	size_t length = sizeof(str) / sizeof(str[0]), i = 0;
-	int opcode_found = 0;
+	/*int opcode_found = 0;*/
 
 	for (; i < length; ++i)
 	{
 		if (strcmp(opcode, str[i].opcode) == 0)
 		{
-			opcode_found = 1;
-			str[i].f(stack_ptr, line_number);
-			break;
+			/*opcode_found = 1;*/
+			if (str[i].f != NULL)
+			{
+				str[i].f(stack_ptr, line_number);
+				break;
+			}
 
 		}
 	}
-	if (!opcode_found)
-		unknown_opcode(line_number, opcode);
 
 }
 /**
