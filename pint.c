@@ -75,7 +75,7 @@ void rotr_element(stack_t **stack, __attribute__((unused)) unsigned int n)
 	while (str->next)
 		str = str->next;
 	str->next = *stack;
-	str>-prev->next = NULL;
+	str->prev->next = NULL;
 	str->prev = NULL;
 	(*stack)->prev = str;
 	(*stack) =str;
