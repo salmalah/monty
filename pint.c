@@ -1,4 +1,27 @@
 #include "monty.h"
+/**
+ * rotl_element - Function otates the stack to the top
+ * @stack: the stack head
+ * @n: line_number
+ * Return: nothing
+ */
+void rotl_element(stack_t **stack, unsigned int n)
+{
+	stack_t *t, *str;
+	(void)n;
+
+	t = *stack;
+	if (stack == NULL || (*stack)->next == NULL)
+		return;
+	*stack = (*stack)->next;
+	(*stack)->prev = NULL;
+	str = *stack;
+	while (str->next != NULL)
+		str = str->next;
+	str->next = t;
+	t->prev = str;
+	t->next = NULL;
+}
 
 /**
  * pint_line -  Functiion prints the top
