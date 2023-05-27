@@ -33,7 +33,7 @@ void div_element(stack_t **stack, unsigned int num)
 
 	div = *stack;
 	divid = (*stack)->next;
-	if (*stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL ||!stack)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", num);
 		exit(EXIT_FAILURE);
@@ -46,4 +46,5 @@ void div_element(stack_t **stack, unsigned int num)
 	divid->n = divid->n / div->n;
 	*stack = divid;
 	free(div);
+
 }
