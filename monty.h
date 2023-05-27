@@ -6,7 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
+#define S 0;
+#define Q 1;
 extern int is_queue;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
