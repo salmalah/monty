@@ -1,5 +1,33 @@
 #include "monty.h"
 /**
+ * mod_element - A function computes the rest of the division of
+ * the second top element of the stack by the top element of the stack.
+ * @stack: The head
+ *  @num: Line number
+ *  Return: Nothing
+ */
+void mod_element(stack_t **stack, unsigned int num)
+{
+	stack_t *h;
+	int res;
+
+	if (stack == NULL || *stack == NULL || !((*stack)->next))
+	{
+		fprintf(stderr, "L%d: can't mod, stack too short\n", num);
+		exit(EXIT_FAILURE);
+	}
+	if (((*stack)->n) == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", num);
+		exit(EXIT_FAILURE);
+	}
+	h = (*stack)->next;
+	res = h->n % ((*stack)->n);
+	pop_element(stack, num);
+	h->n = res;
+
+}
+/**
  * sub_l - A function that subtracts the
  * top element of the stack from the second top element
  * @stack: The head
