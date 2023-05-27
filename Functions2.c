@@ -1,5 +1,29 @@
 #include "monty.h"
 /**
+ *
+ * pchr-element - A function prints the char at the top of the stack
+ * @stack: the head of stack
+ * @line_number: number of ligne
+ * return: nothing
+ */
+void pchar_element(stack_t **stack, unsigned int line_number)
+{
+	stack_t *st;
+
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	st = *stack;
+	if (st->n < 0 || st->n > 127)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", st->n);
+}
+/**
  * pop_element - A function removes the top element from the stack
  * @stack: head of the stack
  * @n: line number
