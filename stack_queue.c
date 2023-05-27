@@ -9,7 +9,7 @@ void queue_el(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	(void)stack;
 	
-	is_queue_mode(0);
+	is_queue_mode(1);
 }
 /**
  * stack_el - Function sets the format of the data to a stack (LIFO)
@@ -21,7 +21,7 @@ void stack_el(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	(void)stack;
 	
-	is_queue_mode(1);
+	is_queue_mode(0);
 }
 int is_queue_mode(int n)
 {
