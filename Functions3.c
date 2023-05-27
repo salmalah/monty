@@ -46,3 +46,25 @@ void div_element(stack_t **stack, unsigned int num)
 	(*stack)->n = r;
 
 }
+/**
+ * mul-element - A function multiplies the second top element of the
+ * stack with the top element of the stack
+ * @stack: the head of stack 
+ * @num: ligne number
+ * Return: nothing
+ */
+void mul_element(stack_t **stack, unsigned int num)
+{
+	int r;
+	stack_t *h;
+
+	if (stack == NULL || *stack == NULL || !((*stack)->next))
+	{
+		fprintf(stderr, "L%d: can't mul, stack too short\n", num);
+		exit(EXIT_FAILURE);
+	}
+	h = (*stack)->next;
+	r = h->n * ((*stack)->n);
+	pop_element(stack, num);
+	h->n = r;
+}
