@@ -15,5 +15,24 @@ void pint_line(stack_t **stack, unsigned int n)
 	}
 	printf("%d\n", (*stack)->n);
 }
+/**
+ *
+ * pstr_element - Functions rints the string starting at the top of the stack
+ * @stack: the head
+ * @n: number of line
+ * Return: nothing
+ */
+void pstr_element(stack_t **stack, unsigned int n)
+{
+	stack_t *str;
+	(void)n;
 
+	str = *stack;
+	while (str != NULL && str->n != 0 && str->n >= 0 && str->n <= 127)
+	{
+		printf("%c", str->n);
+		str = str->next;
+	}
+	printf("\n");
+}
 
