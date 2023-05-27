@@ -29,22 +29,20 @@ void sub_l(stack_t **stack, unsigned int num)
  */
 void div_element(stack_t **stack, unsigned int num)
 {
-	stack_t *div, *divid;
+	int r;
 
-	div = *stack;
-	divid = (*stack)->next;
-	if (*stack == NULL || (*stack)->next == NULL ||!stack)
+	if (!stack || !*stack || !((*stack)->next))
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
-	if (divid->n == 0)
+	if (((*stack)->n) == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", num);
 		exit(EXIT_FAILURE);
 	}
-	divid->n = divid->n / div->n;
-	*stack = divid;
-	free(div);
+	r = ((*stack)->next->n) / ((*stack)->n);
+	(*stack)->n = r;
+	free(stack);
 
 }
