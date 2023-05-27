@@ -10,17 +10,18 @@ void rotl_element(stack_t **stack, unsigned int n)
 	stack_t *t, *str;
 	(void)n;
 
-	t = *stack;
+	
 	if (stack == NULL || (*stack)->next == NULL)
 		return;
-	*stack = (*stack)->next;
-	(*stack)->prev = NULL;
-	str = *stack;
-	while (str->next != NULL)
-		str = str->next;
-	str->next = t;
-	t->prev = str;
-	t->next = NULL;
+	str = (*stack)->next;
+	str->prev = NULL;
+	t = *stack;
+	while (t->next != NULL)
+		t = t->next;
+	t->next = *stack;
+	(*stack)->next = NULL;
+	(*stack)->prev = t;
+	(*stack= = str;
 }
 
 /**
