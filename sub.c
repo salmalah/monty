@@ -42,7 +42,7 @@ void div_element(stack_t **stack, unsigned int num)
 		exit(EXIT_FAILURE);
 	}
 	r = ((*stack)->next->n) / ((*stack)->n);
+	pop_element(stack, num);
 	(*stack)->n = r;
-	free(stack);
 
 }
