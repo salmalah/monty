@@ -35,12 +35,12 @@ void div_element(stack_t **stack, unsigned int num)
 	divid = (*stack)->next;
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "Error at line %d: can't div, stack too short\n", num);
+		fprintf(stderr, "L%d: can't div, stack too short\n", num);
 		exit(EXIT_FAILURE);
 	}
 	if (divid->n == 0)
 	{
-		fprintf(stderr, "Error at line %d: division by zero\n", num);
+		fprintf(stderr, "L%d: division by zero\n", num);
 		exit(EXIT_FAILURE);
 	}
 	divid->n = divid->n / div->n;
