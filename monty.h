@@ -47,6 +47,7 @@ int is_integer(const char *str);
 void nop_f(stack_t **head, unsigned int n);
 void error_pop(stack_t **head, unsigned int counter);
 void pop_element(stack_t **stack, unsigned int n);
+void div_element(stack_t **stack, unsigned int num);
 void add_elements(stack_t **stack, unsigned int num);
 void swap_element(stack_t **stack, unsigned int n);
 void free_stack(stack_t **stack);
