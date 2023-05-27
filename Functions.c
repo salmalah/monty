@@ -39,16 +39,20 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 
 	for (; i < length; ++i)
 	{
-		if (strcmp(opcode, str[i].opcode) == 0)
+		if (strcmp(opcode, str[i].opcode) != 0)
 		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+			exit(EXIT_FAILURE);
 			/*opcode_found = 1;*/
-			if (str[i].f != NULL)
+			/*if (str[i].f != NULL)
 			{
 				str[i].f(stack_ptr, line_number);
 				break;
-			}
+			}*/
 
 		}
+		else
+			str[i].f(stack_ptr, line_number);
 	}
 
 }
