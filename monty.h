@@ -44,6 +44,7 @@ void pint_line(stack_t **stack, unsigned int n);
 void pchar_element(stack_t **stack, unsigned int line_number);
 void pstr_element(stack_t **stack, unsigned int n);
 void rotl_element(stack_t **stack, unsigned int n);
+void rotr_element(stack_t **stack, __attribute__((unused)) unsigned int n);
 void unknown_opcode(unsigned int n, char *opcode);
 void sub_l(stack_t **stack, unsigned int num);
 int is_integer(const char *str);

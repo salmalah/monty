@@ -59,4 +59,25 @@ void pstr_element(stack_t **stack, unsigned int n)
 	}
 	printf("\n");
 }
+/**
+ * rotr_element - Function rotates the stack to the bottom
+ * @stack: the head
+ * @n: number of line unused
+ * Return: nothing
+ */
+void rotr_element(stack_t **stack, __attribute__((unused)) unsigned int n)
+{
+	stack_t *str;
 
+	str = *stack;
+	if (str == NULL || str->next == NULL)
+		return;
+	while (str->next)
+		str = str->next;
+	str->next = *stack;
+	str>-prev->next = NULL;
+	str->prev = NULL;
+	(*stack)->prev = str;
+	(*stack) =str;
+
+}
