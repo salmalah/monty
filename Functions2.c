@@ -52,13 +52,13 @@ void swap_element(stack_t **stack, unsigned int n)
 	stack_t *s = NULL;
 	int num = 0;
 
-	s = *stack;
-	num = s->n;
 	if (*stack == NULL || (*stack)->next == NULL || stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", n);
 		exit(EXIT_FAILURE);
 	}
+	s = *stack;
+	num = s->n;
 	s->n = num;
 	s->n = s->next->n;
 	s->next->n = num;
