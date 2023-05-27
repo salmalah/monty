@@ -35,8 +35,7 @@ void execute_cmd(char *opcode, unsigned int line_number, stack_t **stack_ptr)
 		  {"div", div_element}, {"mul", mul_element}, 
 		  {"mod", mod_element}, 
 		  {"pchar", pchar_element}, {"pstr", pstr_element}, 
-		  {"rotl", rotl_element}, {"rotr", rotr_element}, 
-		  {"stack", stack_el}, {"queue", queue_el}, {NULL, NULL}
+		  {"rotl", rotl_element}, {"rotr", rotr_element}, {NULL, NULL}
 	};
 	size_t length = sizeof(str) / sizeof(str[0]), i = 0;
 	/*int opcode_found = 0;*/
