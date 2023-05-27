@@ -6,9 +6,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#define S 0;
-#define Q 1;
-extern int is_queue;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -42,6 +39,7 @@ extern stack_t *stack;
 void push_line(stack_t **stack, unsigned int line_number);
 void pall_lines(stack_t **stack, unsigned int line_number);
 void pint_line(stack_t **stack, unsigned int n);
+int is_queue_mode(int n);
 void queue_el(stack_t **stack, unsigned int line_number);
 void stack_el(stack_t **stack, unsigned int line_number);
 void pchar_element(stack_t **stack, unsigned int line_number);
