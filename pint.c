@@ -11,7 +11,7 @@ void rotl_element(stack_t **stack, unsigned int n)
 	(void)n;
 
 	
-	if (stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 		return;
 	str = (*stack)->next;
 	str->prev = NULL;
