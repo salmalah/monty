@@ -21,7 +21,7 @@ void rotl_element(stack_t **stack, unsigned int n)
 	t->next = *stack;
 	(*stack)->next = NULL;
 	(*stack)->prev = t;
-	(*stack= = str;
+	(*stack) = str;
 }
 
 /**
