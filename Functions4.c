@@ -10,7 +10,6 @@ void rotl_element(stack_t **stack, unsigned int n)
 	stack_t *t, *str;
 	(void)n;
 
-	
 	if (*stack == NULL || (*stack)->next == NULL)
 		return;
 	str = (*stack)->next;
@@ -40,7 +39,6 @@ void pint_line(stack_t **stack, unsigned int n)
 	printf("%d\n", (*stack)->n);
 }
 /**
- *
  * pstr_element - Functions rints the string starting at the top of the stack
  * @stack: the head
  * @n: number of line
@@ -78,6 +76,6 @@ void rotr_element(stack_t **stack, __attribute__((unused)) unsigned int n)
 	str->prev->next = NULL;
 	str->prev = NULL;
 	(*stack)->prev = str;
-	(*stack) =str;
+	(*stack) = str;
 
 }

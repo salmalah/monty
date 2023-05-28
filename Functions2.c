@@ -1,7 +1,6 @@
 #include "monty.h"
 /**
- *
- * pchr-element - A function prints the char at the top of the stack
+ * pchar_element - A function prints the char at the top of the stack
  * @stack: the head of stack
  * @line_number: number of ligne
  * return: nothing

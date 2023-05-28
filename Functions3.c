@@ -75,9 +75,9 @@ void div_element(stack_t **stack, unsigned int num)
 
 }
 /**
- * mul-element - A function multiplies the second top element of the
+ * mul_element - A function multiplies the second top element of the
  * stack with the top element of the stack
- * @stack: the head of stack 
+ * @stack: the head of stack
  * @num: ligne number
  * Return: nothing
  */
